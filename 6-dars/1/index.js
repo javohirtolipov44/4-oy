@@ -36,7 +36,7 @@ const server = http.createServer((request, response) => {
         const index = users.findIndex((user) => user.id === updatedUser.id);
         users[index] = updatedUser;
         response.end(JSON.stringify(updatedUser));
-        console.log("User qo'shildi\n", updatedUser);
+        console.log("User o'zgartirildi\n", updatedUser);
       });
     } else if (method === "DELETE") {
       //http://localhost:4000/users/3
