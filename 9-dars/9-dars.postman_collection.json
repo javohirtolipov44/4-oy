@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "ff76e76c-95a9-4c52-abad-da2ee2b664ab",
+		"name": "9-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14374179"
+	},
+	"item": [
+		{
+			"name": "hamma_foydalanuvchilar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "faol_foydalanuvchilar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/users/active"
+			},
+			"response": []
+		},
+		{
+			"name": "bitta_foydalanuvchi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/users/3"
+			},
+			"response": []
+		},
+		{
+			"name": "yangi_foydalanuvchi_qoshish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"vali\",\r\n    \"email\": \"vali@gmail.com\",\r\n    \"age\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/user"
+			},
+			"response": []
+		},
+		{
+			"name": "qidirish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/users/search?username=javohir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "javohir"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
