@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "2db2ee69-3d3d-48db-824c-08c5e20abfc7",
+		"name": "10-dars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14374179"
+	},
+	"item": [
+		{
+			"name": "all_news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/news"
+			},
+			"response": []
+		},
+		{
+			"name": "news_by_category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/news/category/local"
+			},
+			"response": []
+		},
+		{
+			"name": "news_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/news/4"
+			},
+			"response": []
+		},
+		{
+			"name": "search_news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/news/content/search?content=toshkent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"news",
+						"content",
+						"search"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "toshkent"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_news",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Toshkent avtobuslarida naqd pulda to‘lovdan voz kechildi - shu bilan muammolar tugadimi?\",\r\n    \"content\": \"Toshkent shahridagi avtobuslarda 2025 yil 1 yanvardan yo‘lkirani naqd pulda qabul qilish to‘xtatildi. Hozirda yo‘l haqi transport, bank kartalari va bir martalik QR-chiptalar orqali amalga oshirilmoqda. Xo‘sh, yangi tizimga moslashuv jarayoni qanday ketmoqda? Kun.uz poytaxt ko‘chalarida ayni mavzuda so‘rovnoma o‘tkazdi.\",\r\n    \"category\": \"local\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/news"
+			},
+			"response": []
+		}
+	]
+}

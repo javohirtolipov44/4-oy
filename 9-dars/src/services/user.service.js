@@ -14,7 +14,6 @@ class userService {
     const findUser = users.find((user) => user.username === body.username);
     body.id = users.length + 1;
     body.status = "active";
-    console.log(body);
     if (!findUser) {
       users.push(body);
       await this.fileSystem.writeFile("users.json", users);
